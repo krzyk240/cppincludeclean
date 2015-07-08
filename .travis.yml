@@ -1,0 +1,17 @@
+language: cpp
+
+compiler:
+  - gcc
+  - clang
+
+cache: apt
+
+script:
+  - make -kj
+  - sudo make install
+
+notifications:
+  email: false
+
+matrix:
+  fast_finish: true

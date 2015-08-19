@@ -29,7 +29,7 @@ using std::vector;
 using std::string;
 
 int VERBOSITY = 1;
-string compiler = getenv("CXX");
+string compiler = getenv("CXX") ? getenv("CXX") : "";
 string command;
 
 const int GFBL_IGNORE_NEW_LINES = 1; // Erase '\n' from each line

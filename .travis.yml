@@ -4,10 +4,16 @@ compiler:
   - gcc
   - clang
 
+env:
+  -
+  - DEBUG=1
+  - DEBUG=2
+  - DEBUG=3
+
 cache: apt
 
 script:
-  - make -kj
+  - make -kj DEBUG=$DEBUG
   - sudo make install
 
 notifications:
